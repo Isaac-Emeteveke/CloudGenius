@@ -24,11 +24,7 @@ stages:
       displayName: 'Use .NET SDK $(dotnetSdkVersion)'
       inputs:
         version: '$(dotnetSdkVersion)'
-
-    - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
-      displayName: 'Write build info'
-      workingDirectory: 'C:\Users\Isaac\OneDrive\Desktop\CloudGenius\WebApplicationbyCloudGenius\WebApplicationbyCloudGenius'
-
+        
     - task: DotNetCoreCLI@2
       displayName: 'Restore project dependencies'
       inputs:
