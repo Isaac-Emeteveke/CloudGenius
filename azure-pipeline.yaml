@@ -69,6 +69,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: website'
             inputs:
-              azureSubscription: 'MySubscription'
-              appName: 'Cloudgenius1234'
+              azureSubscription: 'Service'
+              appName: 'netcg-cg'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
